@@ -287,7 +287,7 @@ header .burger:hover svg {
 
 .projects .card {
     position: relative;
-    min-width: 341px;
+    min-width: 300px;
 }
 
 .projects .card-info {
@@ -640,5 +640,13 @@ footer .icons svg:hover {
 
     .about .image {
         height: 300px;
+    }
+}
+
+@media (max-width: 442px) {
+
+    .card-info h3,
+    .card-info p {
+        font-size: 0.8em;
     }
 }
