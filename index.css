@@ -164,6 +164,10 @@ section {
     position: relative;
 }
 
+abbr {
+    transition-duration: 0ms;
+}
+
 /* Header */
 
 header {
@@ -281,13 +285,15 @@ header .burger:hover svg {
 /* Projects */
 
 .projects img {
-    max-width: 100%;
-    object-fit: cover;
+    width: 100%;
+    object-fit: fill;
+    height: 250px;
 }
 
 .projects .card {
     position: relative;
     min-width: 300px;
+    height: 250px;
 }
 
 .projects .card-info {
@@ -310,7 +316,7 @@ header .burger:hover svg {
 
 .projects .card-info h3,
 .projects .card-info p,
-.projects .card-info a {
+.projects .card-info .link {
     position: absolute;
     text-align: center;
     visibility: hidden;
@@ -322,6 +328,16 @@ header .burger:hover svg {
     margin: 0 auto;
 }
 
+.projects .card-info a {
+    
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .45s ease-in-out;
+    top: 75%;
+    margin: 0 10px;
+}
+
 .projects .card-info h3,
 .projects .card-info p {
     width: 75%;
@@ -329,6 +345,7 @@ header .burger:hover svg {
 
 .projects .card:hover .card-info h3,
 .projects .card:hover .card-info p,
+.projects .card:hover .card-info .link,
 .projects .card:hover .card-info a{
     top: 10%;
     visibility: visible;
@@ -340,7 +357,8 @@ header .burger:hover svg {
     margin-top: 2.5rem;
 }
 
-.projects .card:hover .card-info a {
+.projects .card:hover .card-info a,
+.projects .card:hover .card-info .link {
     top: 65%;
 }
 
