@@ -294,6 +294,7 @@ header .burger:hover svg {
     position: relative;
     min-width: 300px;
     height: 250px;
+    margin-bottom: 25px;
 }
 
 .projects .card-info {
@@ -340,7 +341,7 @@ header .burger:hover svg {
 
 .projects .card-info h3,
 .projects .card-info p {
-    width: 75%;
+    width: 90%;
 }
 
 .projects .card:hover .card-info h3,
