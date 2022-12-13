@@ -1,6 +1,6 @@
 /* Nav hamburger */
 function hamburger() {
-    var x = document.getElementById("burger");
+    const x = document.getElementById("burger");
     x.classList.toggle("display");
   }
 
@@ -11,9 +11,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor =>{
     document.querySelector(this.getAttribute("href")).scrollIntoView({
       behavior : "smooth"
     });
-    var x = document.getElementById("burger");
+    const x = document.getElementById("burger");
     if (x.classList.contains("display")) {
       x.classList.remove("display");
     }
   });
 });
+
+// Onload animation
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.target.classList.value === "exp-box") {
+      entry.target.classList.add("animation")
+    }
+    if(entry.isIntersecting) {
+      entry.target.classList.remove("animation")
+    }
+  })
+})
+
+document.querySelectorAll(".animation").forEach(element => observer.observe(element));
+document.querySelectorAll(".exp-box").forEach(element => observer.observe(element));
