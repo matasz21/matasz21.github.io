@@ -20,16 +20,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor =>{
 
 // Onload animation
 
+document.querySelectorAll(".card").forEach((el) => el.classList.add("animation"))
+document.querySelectorAll(".exp-box").forEach((el) => el.classList.add("animation"))
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    if (entry.target.classList.value === "exp-box") {
-      entry.target.classList.add("animation")
-    }
-    if(entry.isIntersecting) {
-      entry.target.classList.remove("animation")
-    }
+
+      if(entry.isIntersecting && entry.target.classList.value.includes("animation")) {
+        entry.target.classList.remove("animation")
+      }
   })
 })
 
 document.querySelectorAll(".animation").forEach(element => observer.observe(element));
-document.querySelectorAll(".exp-box").forEach(element => observer.observe(element));

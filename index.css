@@ -15,12 +15,8 @@
 }
 
 body {
-  background-color: #24283d;
   overflow-x: hidden;
-}
-
-.animation {
-    opacity: 0;
+  background-color: #24283d;
 }
 
 .container {
@@ -252,7 +248,7 @@ header .burger:hover svg {
 /* About */
 .about {
   padding-top: 92px;
-  min-height: 100vh;
+  min-height: calc(100vh + 1px);
 }
 
 .about .image {
@@ -401,17 +397,12 @@ header .burger:hover svg {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat (6, 1fr);
   grid-gap: 20px;
   position: relative;
 }
 
-.exp-item {
-  position: relative;
-}
-
 .exp-box {
-  position: inherit;
+  position: relative;
 }
 
 .exp-box::before {
@@ -436,7 +427,7 @@ header .burger:hover svg {
   position: absolute;
   z-index: 998;
   right: 50%;
-  top: -7px;
+  top: -5px;
   padding: 5px;
   background: #24283d;
   border: 2px solid #3b87ca;
@@ -569,6 +560,13 @@ footer .icons svg:hover {
 
 /* Responsive */
 
+@media (min-width: 1400px) {
+  .animation {
+    opacity: 0;
+    transform: translateX(50px);
+}
+}
+
 @media (max-width: 992px) {
   .number {
     display: none;
@@ -651,6 +649,11 @@ footer .icons svg:hover {
   .contacts .phone {
     grid-column: 2;
     grid-row: 1;
+  }
+
+  .card-info h3,
+  .card-info p {
+    font-size: 1.2em;
   }
 }
 
