@@ -25,6 +25,9 @@ body {
   min-height: 100%;
   padding: 0 15px;
 }
+.animation {
+  opacity: 0;
+}
 
 .logo {
   margin: auto 0 auto 1rem;
@@ -280,6 +283,20 @@ header .burger:hover svg {
 .about button {
   margin-top: 40px;
   margin-right: 15px;
+}
+
+/* Technologies */
+.tech-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.tech-container img {
+  max-width: 250px;
+  max-height: 100px;
+  margin: 20px 35px;
 }
 
 /* Projects */
