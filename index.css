@@ -422,6 +422,10 @@ header .burger:hover svg {
   position: relative;
 }
 
+.exp-box ul {
+  margin-left: 20px;
+}
+
 .exp-box::before {
   content: "";
   display: block;
@@ -458,18 +462,18 @@ header .burger:hover svg {
 }
 
 .exp-box:nth-child(2) {
-  grid-column: 1 / 5;
-  grid-row: 2 / 4;
+  grid-column: 3 / 7;
+  grid-row: 2 / 3;
 }
 
 .exp-box:nth-child(3) {
   grid-column: 1 / 5;
-  grid-row: 4 / 9;
+  grid-row: 3/5;
 }
 
 .exp-box:nth-child(4) {
-  grid-column: 5 / 9;
-  grid-row: 2;
+  grid-column: 1 / 5;
+  grid-row: 5;
 }
 
 .exp-box:nth-child(5) {
@@ -480,6 +484,11 @@ header .burger:hover svg {
 .exp-box:nth-child(6) {
   grid-column: 5 / 9;
   grid-row: 4;
+}
+
+.exp-box:nth-child(7) {
+  grid-column: 5 / 9;
+  grid-row: 5;
 }
 
 .exp-box:hover,
